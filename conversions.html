@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <div>
+            Degree Ceslcius Conversion
+            <div>
+                <p>Enter the temprature in Degree Celsius</p>
+                <input type="text" name="degrees_c" id="degrees_c">
+                <button type="submit" onclick="onclick=conversion_degrees()">Submit</button>
+            </div>
+        </div>
+
+        <div>
+            BMI Calculations
+            <div>
+                <p>
+                    Enter mass in KG
+                </p>
+                <input type="text" id="mass_kg" name="mass_kg">
+                <p>
+                    Enter Height in Meters
+                </p>
+                <input type="text" name="height_m" id="height_m">
+            </div>
+            <button type="submit" onclick="calculate_bmi()">SUbmit</button>
+        </div>
+    </div>
+
+    <script>
+        function conversion_degrees() {
+        let degree_celsius = document.getElementById("degrees_c").value;
+        let fahrenheit = (degree_celsius * 9/5) + 32;
+
+        alert(degree_celsius + " degrees Celsius is equal to " + fahrenheit + " degrees Fahrenheit");
+    }
+    </script>
+    <script>
+        function calculate_bmi() {
+            let mass = document.getElementById("mass_kg").value;
+            let height =  document.getElementById("height_m").value;
+            let h_squared = height * height;
+
+            let bmi = mass / h_squared;
+
+            alert("The BMI of Mass" + mass + "and the height of" + height + "=" + bmi);
+        }
+    </script>
+    
+</body>
+</html>
